@@ -15,7 +15,7 @@ class FnModel(models.Model):
     id = models.AutoField(primary_key=True)
     ffd = models.CharField(max_length=4)
     fh_type = models.CharField(max_length=10)
-    fn_z_nom =madels.I(max_)
+    fn_z_nom = models.IntegerField(max_length=16)
     fn_status
     fn_data_start
     fn_data_end
