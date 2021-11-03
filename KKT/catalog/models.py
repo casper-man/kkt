@@ -26,14 +26,16 @@ class OfdModel(models.Model):
 
 class ClientsModel(models.Model):
     # Fields
-    inn = models.CharField(max_length=12)
-    ogrn = models.CharField(max_length=16)
+    client_inn = models.CharField(max_length=12)
+    client_ogrn = models.CharField(max_length=16)
     ip = models.BooleanField(default=True)
     client_full_name = models.CharField(max_length=250)
     client_short_name = models.CharField(max_length=150)
     director_inn = models.CharField(max_length=12)
     agent = models.CharField(max_length=150)
     agent_doc = models.CharField(max_length=150)
+    kkt_address = models.CharField(max_length=350)
+    kkt_place = models.CharField(max_length=100)
 
 
 class KktModel(models.Model):
@@ -56,4 +58,17 @@ class CatalogModel(models.Model):
     date = models.DateField(auto_now_add=True)
     agent_status = models.BooleanField(default=False)
     registration = models.BooleanField(default=False)
+    change_address = models.BooleanField(default=False)
+    change_ofd = models.BooleanField(default=False)
+    change_in_automate = models.BooleanField(default=False)
     change_fn = models.BooleanField(default=False)
+    change_to_offline = models.BooleanField(default=False)
+    change_to_online = models.BooleanField(default=False)
+    change_client_name = models.BooleanField(default=False)
+    change_other = models.BooleanField(default=False)
+    old_fn_fd = models.IntegerField(max_length=8)
+    old_fn_fp = models.IntegerField(max_length=10)
+    old_fn_datetime = models.DateTimeField()
+    new_fn_fd = models.IntegerField(max_length=8)
+    new_fn_fp = models.IntegerField(max_length=10)
+    new_fn_datetime = models.DateTimeField()
