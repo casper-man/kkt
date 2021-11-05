@@ -1,5 +1,6 @@
 # My files
 config.py
+KKT/catalog/migrations/*
 
 # Created by https://www.toptal.com/developers/gitignore/api/python,pycharm,django,venv
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,pycharm,django,venv
